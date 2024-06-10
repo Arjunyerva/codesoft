@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+void add(double x,double y){
+    cout<<x<<"+"<<y<<"="<<x+y<<endl;
+}
+void sub(double x,double y){
+    cout<<x<<"-"<<y<<"="<<x-y<<endl;
+}
+void mul(double x,double y){
+    cout<<x<<"*"<<y<<"="<<x*y<<endl;
+}
+void division(double x,double y){
+    if(y==0){
+        cout<<"error occurs"<<endl;
+    }
+    else{
+    cout<<x<<"/"<<y<<"="<<x/y<<endl;
+}
+}
+int main(){
+    int choice;
+    int n1,n2;
+    cout << "Select operation:" << endl;
+    cout << "1. Add" << endl;
+    cout << "2. Subtract" << endl;
+    cout << "3. Multiply" << endl;
+    cout << "4. Divide" << endl;
+    cout << "Enter choice (1/2/3/4): ";
+    cin >> choice;
+    if (choice >= 1 && choice <= 4) {
+            cout << "Enter first number: ";
+            cin >> n1;
+            cout << "Enter second number: ";
+            cin >> n2;
+            switch(choice){
+                case 1:
+                add(n1,n2);
+                break;
+                case 2:
+                sub(n1,n2);
+                break;
+                case 3:
+                mul(n1,n2);
+                break;
+                case 4:
+                division(n1,n2);
+                break;
+                default:
+                cout<<"error occurs"<<endl;
+            }}
+    else{
+        cout<<"invalid choice enters"<<endl;
+    }
+    return 0;
+    
+}
